@@ -5,14 +5,14 @@ library(ngram)
 options(httr_oauth_cache=T)
 
 #set up permissions
-api <- ""
-apiSecret <- ""
-token <- ""
-tokenSecret <- ""
+api <- ""						#Include your account's API
+apiSecret <- ""						#Include your accounts secret API
+token <- ""						#Include your account's token
+tokenSecret <- ""					#Include your account's secret token
 setup_twitter_oauth(api, apiSecret, token, tokenSecret)
 
 #farm tweets
-reactionary <- getUser('')
+reactionary <- getUser('')				#Include your account's name
 friendList <- reactionary$getFriends()
 friend.tweets <- c()
 #friend.profiles <- c()
